@@ -1,0 +1,51 @@
+#search-results {
+    height: 400px;
+    padding: 20px;
+    overflow-y: scroll;
+    box-shadow: inset 0px 0px 5px 1px rgb(182, 181, 181);
+}
+
+#itinerary, #formSearch {
+    font-size: 20px;
+}
+
+#search-results section {
+    margin: 10px;
+}
+
+
+/* Concert Styles */
+.concert {
+    display: flex;
+}
+
+.concert-text {
+    width: 50%;
+    overflow: hidden;
+    height: 200px;
+
+}
+.concert-img {
+    width: 50%;
+    overflow: hidden;
+    height: 200px;
+}
+
+.concert-img img {
+    width: 100%;
+}
+
+
+#search-header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    justify-content: center;
+}
+
+.hidden {
+    display:none;
+}
+
+

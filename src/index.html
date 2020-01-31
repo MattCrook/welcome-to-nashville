@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to Nashville!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #20B2AA;">
+        <a class="navbar-brand" href="#" id="welcome">Welcome to Nashville</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" id="search-concerts-link">Concerts <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" id="view-itineraries-link">View Itineraries</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="search-parks-link">Parks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="search-restaurants-link">Restaurants</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="search-arts-link">Arts</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0" id="navbar-search">
+                <div id="search-drop">
+                    
+                </div>
+                <div id="search-input">
+                </div>
+            </form>
+        </div>
+    </nav>
+    <section id="search">
+        <div id="formSearch">
+            <div id="search-parks">
+                <label for="search-parks">Search Parks</label>
+                <input name="" type="text" id="search-parks">
+                <button type="submit" id="search-parks-btn">Submit</button>
+            </div>
+
+            <div id="search-restaurants">
+                <label for="search-restaurants">Search Restaurants</label>
+                <!-- <input type="text" id="search-restaurants"> -->
+                <button type="submit" id="search-restaurants-btn">Submit</button>
+            </div>
+
+            <div id="search-arts">
+                <label for="search-arts">Search Public Art Collections</label>
+                <input name="" type="text" id="search-public-arts">
+                <button id="search-arts-btn">Submit</button>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="search-header">
+
+    </div>
+    
+    <h2 id="search-result-title">Search Results</h2>
+
+    <section id="search-results">
+        <!-- 
+        <section id="searching-for">
+
+        </section>
+
+        <section id="pagination">
+
+        </section> -->
+
+    </section>
+
+    <h2 id="itinerary-title">Itinerary</h2>
+    <section id="itinerary">
+        <div id="park__itin">Park: No park saved in itinerary</div>
+        <div id="concert__itin">Concert: No concert saved in itinerary</div>
+        <div id="restaurant__itin">Restaurant: No restaurant saved in itinerary</div>
+        <div id="arts__itin">Public Arts Collection: No art collection saved in itinerary</div>
+        <button type="submit" id="itinerary-btn"> Save Itinerary</button>
+
+    </section>
+    <section id="all-itineraries">
+
+    </section>
+    <footer></footer>
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="../api/apiKeys.js"></script>
+
+    <!--Restaurant API Scripts -->
+    <script src="scripts/restaurants/restaurants-rendertoDOM.js"></script>
+    <script src="scripts/restaurants/restaurants-toHTML.js"></script>
+    <script src="scripts/restaurants/restaurantsAPIManager.js"></script>
+    <script src="scripts/restaurants/restaurants-addToItinerary.js"></script>
+
+
+    <!-- PARKS API SCRIPTS -->
+
+
+
+    <!-- Concert Scripts -->
+    <script src="scripts/concerts/concert-apiManager.js"></script>
+    <script src="scripts/concerts/concert-genres.js"></script>
+    <script src="scripts/concerts/concerts-searchEventManager.js"></script>
+    <script src="scripts/concerts/concert-validate-input.js"></script>
+    <script src="scripts/concerts/concerts-searchResultsDomManager.js"></script>
+    <script src="scripts/concerts/concert-make-genre-options.js"></script>
+
+    <!-- ARTS API SCRIPTS -->
+    <script src="./scripts/arts/arts_apiManager.js"></script>
+    <script src="./scripts/arts/arts_searchResultsDomManager.js"></script>
+    <script src="./scripts/arts/arts_searchEventManager.js"></script>
+    <script src="./scripts/arts/artshtml.js"></script>
+    <script src="./scripts/arts/artsitin.js"></script>
+    <!-- END ARTS API SCRIPTS -->
+
+    <!-- PARKS API SCRIPTS -->
+
+    <script src="./scripts/parks/parks_apiManager.js"></script>
+    <script src="./scripts/parks/parks_searchResultsDomManager.js"></script>
+    <script src="./scripts/parks/parks_searchEventManager.js"></script>
+    <script src="./scripts/parks/parkshtml.js"></script>
+    <script src="./scripts/parks/parksitin.js"></script>
+    <!-- END PARKS API SCRIPTS -->
+
+    <script src="./scripts/DOMManager.js"></script>
+    <script src="./scripts/eventManager.js"></script>
+    <script src="./scripts/api-manager.js"></script>
+    <script src="./scripts/main.js"></script>
+
+</body>
+
+</html>
